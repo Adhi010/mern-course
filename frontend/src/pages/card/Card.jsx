@@ -8,7 +8,7 @@ const Card = ({ product, val, products, setProducts }) => {
   //   console.log("image== ", product.image);
   // console.log("key== ", val);
   const navigate = useNavigate();
-  const apiUrl = "https://mern-course-8rqs.onrender.com/";
+  const apiUrl = `${import.meta.env.VITE_REACT_API}`;
   const handleEdit = (id) => {
     navigate(`/edit/${id}`);
   };

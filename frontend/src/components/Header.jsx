@@ -12,7 +12,7 @@ const Header = () => {
     <>
       <div className="header">
         <h1 className="logo">Product Store</h1>
-        <input />
+        <input type="search" />
         <nav className="flex gap-[10px]">
           <Link to="/">Home</Link>
           <Link to="/create">Create</Link>

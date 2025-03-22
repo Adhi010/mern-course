@@ -30,7 +30,8 @@ const ProductForm = ({ intialValues = {} }) => {
   });
 
   const navigate = useNavigate();
-  const apiUrl = "https://mern-course-8rqs.onrender.com/";
+  // const apiUrl = "https://mern-course-8rqs.onrender.com/";
+  const apiUrl = "http://localhost:5000";
   const onSubmit = async (values) => {
     const backendUrl = apiUrl;
     try {

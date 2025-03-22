@@ -1,16 +1,17 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./LoginPage.css";
+import Signup from "./signup-pages/Signup";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { setAuth } = useAuth();
   const navigate = useNavigate();
-  const apiUrl = "https://mern-course-8rqs.onrender.com/";
-  const loginUrl = apiUrl + "api/login";
+  const apiUrl = `${import.meta.env.VITE_REACT_API}`;
+  const loginUrl = apiUrl + "/api/login";
 
   const handleLogin = async () => {
     try {
@@ -53,6 +54,9 @@ const LoginPage = () => {
         <button className="grey_btn" onClick={handleLogin}>
           Login
         </button>
+        <Link to="/register" className="reg-link">
+          Register
+        </Link>
       </div>
     </>
   );

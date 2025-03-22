@@ -148,3 +148,7 @@ input[type="text"].month_input:active::before {
   gap: 20px;
   flex-wrap: wrap;
 }
+.reg-link {
+  text-decoration: underline;
+  color: navy;
+}

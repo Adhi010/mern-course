@@ -8,6 +8,7 @@ import CreateProduct from "./pages/CreateProduct";
 import EditProduct from "./pages/EditProduct";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Hooks from "./components/Hooks";
+import Signup from "./pages/signup-pages/Signup";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         />
         <Route path="/hooks" element={<Hooks />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<Signup />} />
         <Route
           path="/create"
           element={

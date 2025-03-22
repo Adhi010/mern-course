@@ -25,6 +25,10 @@ const __dirname = path.resolve();
 
 app.post("/api/register", async (req, res) => {
   const user = req.body;
+  const userRole = "user";
+  if (!user?.role) {
+    user.role = userRole;
+  }
   if (!user?.username || !user?.password || !user?.role) {
     return res
       .status(400)
@@ -109,6 +113,15 @@ app.post("/api/products", verifyJWT, async (req, res) => {
 });
 
 app.get("/api/products", verifyJWT, async (req, res) => {
+  try {
+    const products = await Product.find({});
+    res.status(200).json({ success: true, data: products });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
+});
+
+app.get("/api/products/all", async (req, res) => {
   try {
     const products = await Product.find({});
     res.status(200).json({ success: true, data: products });
