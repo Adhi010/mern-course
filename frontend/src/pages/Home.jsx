@@ -5,7 +5,7 @@ import Card from "./card/Card.jsx";
 import "./card/Card.css";
 import "./Home.css";
 import { useProductsContext } from "./context/ProductsContextProvider.jsx";
-
+const apiUrl = "https://mern-course-8rqs.onrender.com/";
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,7 +16,7 @@ const Home = () => {
     setLoading(true);
     setError(false);
     try {
-      const response = await axios.get("http://localhost:5000/api/products");
+      const response = await axios.get(apiUrl + "api/products");
       // console.log(response);
       setProducts(response.data?.data);
       // dispatch is not a function

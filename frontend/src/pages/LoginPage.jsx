@@ -9,7 +9,8 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const { setAuth } = useAuth();
   const navigate = useNavigate();
-  const loginUrl = "http://localhost:5000/api/login";
+  const apiUrl = "https://mern-course-8rqs.onrender.com/";
+  const loginUrl = apiUrl + "api/login";
 
   const handleLogin = async () => {
     try {

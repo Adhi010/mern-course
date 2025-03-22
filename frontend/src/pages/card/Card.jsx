@@ -8,14 +8,14 @@ const Card = ({ product, val, products, setProducts }) => {
   //   console.log("image== ", product.image);
   // console.log("key== ", val);
   const navigate = useNavigate();
-
+  const apiUrl = "https://mern-course-8rqs.onrender.com/";
   const handleEdit = (id) => {
     navigate(`/edit/${id}`);
   };
   const handleDelete = async (id) => {
     try {
       // await axios.delete("http://localhost:5000/api/products?id=" + id);
-      await axios.delete("http://localhost:5000/api/products", {
+      await axios.delete(apiUrl + "/api/products", {
         params: { id },
       });
       const filteredData = products.filter((x) => {
