@@ -30,9 +30,9 @@ const ProductForm = ({ intialValues = {} }) => {
   });
 
   const navigate = useNavigate();
-
+  const apiUrl = "https://mern-course-8rqs.onrender.com/";
   const onSubmit = async (values) => {
-    const backendUrl = "http://localhost:5000";
+    const backendUrl = apiUrl;
     try {
       if (intialValues?._id) {
         const response = await axios.put(

@@ -19,6 +19,9 @@ dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
+// app.get("/",async(req,res)=>{
+
+// });
 
 app.post("/api/register", async (req, res) => {
   const user = req.body;
@@ -150,7 +153,7 @@ app.delete("/api/products", async (req, res) => {
     res.status(500).json({ success: false, message: "Server Error" });
   }
 });
-if (process.env.NODE_ENV === "production ") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/dist")));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));

@@ -2,11 +2,10 @@
   "name": "mern-course",
   "version": "1.0.0",
   "main": "index.js",
-
   "scripts": {
     "dev": "NODE_ENV=development nodemon backend/server.js",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "set NODE_ENV=production && node backend/server.js"
+    "start": "set NODE_ENV=production&& node backend/server.js"
   },
   "type": "module",
   "author": "",
