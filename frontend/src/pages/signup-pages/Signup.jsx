@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  // const regUrl = `${import.meta.env.VITE_REACT_API}/api/register`;
-  const regUrl = `http://localhost:5000/api/register`;
+  const regUrl = `${import.meta.env.VITE_REACT_API}/api/register`;
+  // const regUrl = `http://localhost:5000/api/register`;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 

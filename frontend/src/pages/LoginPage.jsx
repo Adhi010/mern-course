@@ -10,12 +10,12 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const { setAuth } = useAuth();
   const navigate = useNavigate();
-  const apiUrl = `${import.meta.env.VITE_REACT_API}`;
-  const loginUrl = apiUrl + "/api/login";
+  const apiUrl = `${import.meta.env.VITE_REACT_API}/api/login`;
+  // const loginUrl = apiUrl + "/api/login";
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post(loginUrl, {
+      const response = await axios.post(apiUrl, {
         username,
         password,
       });
