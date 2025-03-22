@@ -1,0 +1,150 @@
+.login-card-container {
+  border: 1px solid black;
+  height: 293px;
+  width: 391px;
+  border-radius: 7px;
+  text-align: center;
+  margin-left: 430px;
+  padding-right: 300px;
+  margin-top: 20px;
+  background-color: #f9f7f7;
+}
+.pt-5 {
+  padding-top: 5px;
+}
+input[type="text"].month_input::before {
+  content: attr(placeholder) !important;
+  color: #aaa;
+  width: 100%;
+}
+
+input[type="text"].month_input:focus::before,
+input[type="text"].month_input:active::before {
+  content: "";
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+  padding-left: 150px;
+  margin-bottom: 20px;
+  text-wrap: nowrap;
+}
+.grey_btn {
+  border-radius: 30px;
+  background: #dbdbdb;
+  color: #000000;
+  font-weight: 400;
+  padding: 10px 30px !important;
+  border: 1px solid #dbdbdb;
+  box-shadow: inset 0 3px 12px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 3px 12px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 3px 12px rgba(0, 0, 0, 0.2);
+  margin-left: 145px;
+}
+.grey_btn:hover {
+  transition: 0.5s ease;
+  color: #ffffff;
+  border: 1px solid #00adef;
+  background: rgba(0, 171, 239, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 171, 239, 1) 0%,
+    rgba(0, 50, 103, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(0, 171, 239, 1)),
+    color-stop(100%, rgba(0, 50, 103, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 171, 239, 1) 0%,
+    rgba(0, 50, 103, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 171, 239, 1) 0%,
+    rgba(0, 50, 103, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(0, 171, 239, 1) 0%,
+    rgba(0, 50, 103, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 171, 239, 1) 0%,
+    rgba(0, 50, 103, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00abef', endColorstr='#003267', GradientType=0 );
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  transition: 0.5s ease;
+}
+.input-field {
+  border: 1px solid black;
+
+  margin-left: 50px;
+  text-align: center;
+  /* padding-left: 150px; */
+  margin-bottom: 20px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.btn {
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: lightblue;
+  box-sizing: border-box;
+  margin-left: 163px;
+  font: 400 11px system-ui;
+  padding: 1px 7px 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-image: initial;
+}
+
+.image-container {
+  /* border: 1px solid black; */
+  height: 70%;
+  border-radius: 7px;
+}
+.card-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.card-content {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: azure;
+}
+.card-buttons {
+  display: flex;
+  gap: 10px;
+}
+.card-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

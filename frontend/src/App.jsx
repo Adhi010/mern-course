@@ -1,32 +1,43 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { Route, Routes } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+import React from "react";
 import Header from "./components/Header";
 import LoginPage from "./pages/LoginPage";
-import CreateProduct from "./pages/create-page/CreateProduct.jsx";
-import Home from "./pages/Home.jsx";
-import EditProduct from "./pages/editProduct/EditProduct.jsx";
-import Signup from "./pages/signup-pages/Signup.jsx";
-import SignupAdmin from "./pages/signup-pages/SignupAdmin.jsx";
-import PlatformManagement from "./pages/context/PlatformManagement.jsx";
+import HomePage from "./pages/HomePage";
+import { Route, Routes } from "react-router-dom";
+import CreateProduct from "./pages/CreateProduct";
+import EditProduct from "./pages/EditProduct";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Hooks from "./components/Hooks";
 
-function App() {
+const App = () => {
   return (
-    <>
+    <div>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute allowedRoles={["admin", "user"]}>
+              <HomePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/hooks" element={<Hooks />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/login/:path" element={<PlatformManagement />} />
-        {/* <Route path="/login/admin" element={<SignupAdmin />} /> */}
-        <Route path="/create" element={<CreateProduct />} />
+        <Route
+          path="/create"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <CreateProduct />
+            </ProtectedRoute>
+          }
+        />
+        {/* <Route path="/create" element={<CreateProduct />} /> */}
         <Route path="/edit/:id" element={<EditProduct />} />
-        <Route path="*" element={<p>Page Not Found</p>} />
+        <Route path="*" element={<p>Page Not Found...</p>} />
       </Routes>
-    </>
+    </div>
   );
-}
+};
 
 export default App;

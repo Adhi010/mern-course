@@ -1,14 +1,16 @@
 .header {
   height: 80px;
-  margin-top: 10px;
-  border: 1px solid black;
-  color: #2a004e;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #d4bee4;
+  background-color: #f9f7f7;
 }
-.nav {
+
+.logo {
+  color: #112d4e;
+}
+
+/* nav {
   display: flex;
   gap: 10px;
-}
+} */
